@@ -30,9 +30,7 @@ class TipsView: UIView {
     }
     private func commonInit(){
         nibView = Bundle.main.loadNibNamed("TipsView", owner: self, options: nil)?[0] as? UIView
-        
         textSet()
-        
         addSubview(nibView!)
     }
     

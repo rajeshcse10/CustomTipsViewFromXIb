@@ -13,13 +13,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipsContainerView: UIView!
     var tipsView:TipsView?
     @IBOutlet weak var tipsViewHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var mCollectionView: UICollectionView!
+    @IBOutlet weak var collectionViewHolder: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setUpTipsView()
+        setUpCollectionView()
     }
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         if tipsViewHeightConstraint.constant == 0{
             return
         }
@@ -32,10 +36,30 @@ class ViewController: UIViewController {
         tipsContainerView.addSubview(tipsView!)
         
     }
+    func setUpCollectionView(){
+        mCollectionView.delegate = self
+        mCollectionView.dataSource = self
+        let nib = UINib(nibName: "HCollectionViewCell", bundle: nil)
+        mCollectionView.register(nib, forCellWithReuseIdentifier: "HCollectionViewCell")
+        
+    }
 }
-
+extension ViewController:UICollectionViewDelegate,UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HCollectionViewCell", for: indexPath) as! HCollectionViewCell
+        cell.titleLabel.text = "Mixed salad"
+        return cell
+    }
+    
+    
+}
 extension ViewController:HeightConstraintProtocol{
     func setTipsViewHeight(_ height: CGFloat) {
         tipsViewHeightConstraint.constant = height
     }
 }
+

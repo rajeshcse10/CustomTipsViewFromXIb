@@ -24,16 +24,40 @@
                                     <constraint firstAttribute="height" constant="128" id="4ZO-6J-lPH"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKz-Fd-bWw">
+                                <rect key="frame" x="10" y="193" width="394" height="239"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mOR-0S-5OL">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="239"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewLayout key="collectionViewLayout" id="KJJ-xH-85Z" customClass="GridLayout" customModule="CustomViewFromXIB" customModuleProvider="target"/>
+                                        <cells/>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="239" id="7Ud-Kr-iQU"/>
+                                    <constraint firstItem="mOR-0S-5OL" firstAttribute="leading" secondItem="cKz-Fd-bWw" secondAttribute="leading" id="RUU-mJ-0Yv"/>
+                                    <constraint firstAttribute="trailing" secondItem="mOR-0S-5OL" secondAttribute="trailing" id="S3D-FO-BM6"/>
+                                    <constraint firstItem="mOR-0S-5OL" firstAttribute="top" secondItem="cKz-Fd-bWw" secondAttribute="top" id="dES-bd-h8S"/>
+                                    <constraint firstAttribute="bottom" secondItem="mOR-0S-5OL" secondAttribute="bottom" id="jYc-2i-KsK"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="cKz-Fd-bWw" firstAttribute="trailing" secondItem="EEw-cV-61o" secondAttribute="trailing" id="CoE-bl-2Yh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EEw-cV-61o" secondAttribute="trailing" constant="10" id="OIt-aj-2bX"/>
+                            <constraint firstItem="cKz-Fd-bWw" firstAttribute="leading" secondItem="EEw-cV-61o" secondAttribute="leading" id="Pso-3N-UM7"/>
+                            <constraint firstItem="cKz-Fd-bWw" firstAttribute="top" secondItem="EEw-cV-61o" secondAttribute="bottom" constant="25" id="QV0-Bb-6bi"/>
                             <constraint firstItem="EEw-cV-61o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="bMD-Fq-EtN"/>
                             <constraint firstItem="EEw-cV-61o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="e2U-sg-pQc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="collectionViewHolder" destination="cKz-Fd-bWw" id="urH-hf-Unn"/>
+                        <outlet property="mCollectionView" destination="mOR-0S-5OL" id="fS7-Iy-aRi"/>
                         <outlet property="tipsContainerView" destination="EEw-cV-61o" id="HKn-P3-QgA"/>
                         <outlet property="tipsViewHeightConstraint" destination="4ZO-6J-lPH" id="Agb-Xo-Vv9"/>
                     </connections>

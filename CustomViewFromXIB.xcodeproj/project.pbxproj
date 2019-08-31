@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18720A64231A4E8E00031FA0 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18720A63231A4E8E00031FA0 /* GridLayout.swift */; };
 		189A494222ED6FEC002CD5B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189A494122ED6FEC002CD5B9 /* AppDelegate.swift */; };
 		189A494422ED6FEC002CD5B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189A494322ED6FEC002CD5B9 /* ViewController.swift */; };
 		189A494722ED6FEC002CD5B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189A494522ED6FEC002CD5B9 /* Main.storyboard */; };
@@ -14,9 +15,12 @@
 		189A494C22ED6FED002CD5B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189A494A22ED6FED002CD5B9 /* LaunchScreen.storyboard */; };
 		189A495422ED7022002CD5B9 /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189A495322ED7022002CD5B9 /* TipsView.swift */; };
 		189A495622ED705B002CD5B9 /* TipsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189A495522ED705B002CD5B9 /* TipsView.xib */; };
+		18D9CF3E231828CA0063BA35 /* HCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D9CF3C231828CA0063BA35 /* HCollectionViewCell.swift */; };
+		18D9CF3F231828CA0063BA35 /* HCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D9CF3D231828CA0063BA35 /* HCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18720A63231A4E8E00031FA0 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		189A493E22ED6FEC002CD5B9 /* CustomViewFromXIB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomViewFromXIB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189A494122ED6FEC002CD5B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		189A494322ED6FEC002CD5B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +30,8 @@
 		189A494D22ED6FED002CD5B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		189A495322ED7022002CD5B9 /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
 		189A495522ED705B002CD5B9 /* TipsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipsView.xib; sourceTree = "<group>"; };
+		18D9CF3C231828CA0063BA35 /* HCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCollectionViewCell.swift; sourceTree = "<group>"; };
+		18D9CF3D231828CA0063BA35 /* HCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				189A494D22ED6FED002CD5B9 /* Info.plist */,
 				189A495322ED7022002CD5B9 /* TipsView.swift */,
 				189A495522ED705B002CD5B9 /* TipsView.xib */,
+				18D9CF3C231828CA0063BA35 /* HCollectionViewCell.swift */,
+				18D9CF3D231828CA0063BA35 /* HCollectionViewCell.xib */,
+				18720A63231A4E8E00031FA0 /* GridLayout.swift */,
 			);
 			path = CustomViewFromXIB;
 			sourceTree = "<group>";
@@ -130,6 +139,7 @@
 			files = (
 				189A495622ED705B002CD5B9 /* TipsView.xib in Resources */,
 				189A494C22ED6FED002CD5B9 /* LaunchScreen.storyboard in Resources */,
+				18D9CF3F231828CA0063BA35 /* HCollectionViewCell.xib in Resources */,
 				189A494922ED6FED002CD5B9 /* Assets.xcassets in Resources */,
 				189A494722ED6FEC002CD5B9 /* Main.storyboard in Resources */,
 			);
@@ -144,7 +154,9 @@
 			files = (
 				189A495422ED7022002CD5B9 /* TipsView.swift in Sources */,
 				189A494422ED6FEC002CD5B9 /* ViewController.swift in Sources */,
+				18720A64231A4E8E00031FA0 /* GridLayout.swift in Sources */,
 				189A494222ED6FEC002CD5B9 /* AppDelegate.swift in Sources */,
+				18D9CF3E231828CA0063BA35 /* HCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
